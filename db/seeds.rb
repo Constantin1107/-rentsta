@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Listing.create(name: "Rhein-Energie Stadion", address: "Cologne", owner_id: 1, price: 200_000, description: "Awesome", capacity: 50_000)
+Listing.create(name: "Allianz Arena", address: "Munich", owner_id: 2, price: 200_000, description: "Good", capacity: 75_000)

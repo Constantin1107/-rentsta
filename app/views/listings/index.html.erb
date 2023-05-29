@@ -1,0 +1,9 @@
+<h1>All listings</h1>
+<%= link_to "Homepage", root_path %>
+<ul>
+  <% @listings.each do |listing| %>
+  <li>
+    <%= link_to listing.name, listing_path(listing.id) %>
+  </li>
+  <% end %>
+</ul>
