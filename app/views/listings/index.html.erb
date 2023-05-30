@@ -1,5 +1,6 @@
 <h1>All listings</h1>
-<%= link_to "Homepage", root_path %>
+<%= link_to 'Homepage', root_path %>
+<%= link_to 'Add listing', new_listing_path %>
 <ul>
   <% @listings.each do |listing| %>
   <li>

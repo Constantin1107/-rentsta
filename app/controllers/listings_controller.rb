@@ -12,7 +12,8 @@ class ListingsController < ApplicationController
   end
 
   def create
-    @listing = Listing.create(listing_params)
+    @listing = Listing.new(listing_params)
+    @listing.user_id = current_user.id
     @listing.save
     redirect_to listing_path(@listing.id)
   end
@@ -30,6 +31,6 @@ class ListingsController < ApplicationController
   private
 
   def listing_params
-    params.require(:listings).permit(:name, :address, :owner_id, :price, :description, :capacity)
+    params.require(:listing).permit(:name, :address, :user_id, :price, :description, :capacity)
   end
 end
