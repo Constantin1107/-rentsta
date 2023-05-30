@@ -4,6 +4,7 @@
 <%= link_to 'Login', new_user_session_path %>
 <%= link_to 'Logout', destroy_user_session_path, data: { turbo_method: :delete } %>
 <%= link_to 'All listings', listings_path %>
-
-
+<%= link_to 'Add listing', new_listing_path %>
+<%# number is irrelevant but needs to be there to show all listings %>
+<%= link_to 'My bookings', listing_bookings_path(2) %>
   <%= render 'shared/footer' %>

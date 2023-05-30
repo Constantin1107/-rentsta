@@ -1,0 +1,11 @@
+<h1>Bookings</h1>
+<%= link_to 'Home', root_path %>
+<% @bookings.each do |booking| %>
+  <ul>
+    <li><%= booking.user.email %></li>
+    <li><%= booking.listing.name %></li>
+    <li><%= booking.booking_date %></li>
+    <li><%= booking.active %></li>
+    <li><%= link_to 'Edit', edit_listing_booking_path(booking.listing.id, booking.id) %></li>
+  </ul>
+<% end %>
