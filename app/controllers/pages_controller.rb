@@ -3,4 +3,8 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def confirmation
+    @booking = current_user.bookings.last
+  end
 end

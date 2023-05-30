@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :listings
+  resources :bookings, only: %i[index new create update]
+  get '/confirmation', to: 'pages#confirmation'
 end
