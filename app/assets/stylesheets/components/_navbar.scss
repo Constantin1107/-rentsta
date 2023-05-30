@@ -1,12 +1,74 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  align-items: center; /* Add this line to vertically center the items */
+  background: #658864;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-lewagon .navbar-brand {
+  color: #ffffff;
+}
+
+
+
+h1 {
+  font-family: $headers-font;
+  font-weight: weight;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.nav-item {
+  color: white;
+  display: flex; /* Add this line to enable flexbox */
+}
+
+.nav-link.login-link {
+  color: #ffffff;
+  font-weight: bold;
+  font-family: $headers-font;
+}
+
+.nav-link.signup-link {
+  color: #658864;
+  background-color: #ffffff;
+  border-radius: 0;
+  border: none;
+  margin-left: 1px; /* Add this line to create some space between the links */
+  font-family: $headers-font;
+  font-weight: bold;
+}
+
+.nav-links-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link.login-link {
+  margin-right: 10px;
+}
+
+.nav-link.signup-link {
+  margin-left: px;
+}
+
+.nav-link.signup-link:hover {
+  background-color: #DDDDDD;
+}
+
+.nav-link.login-link:hover {
+  color: #DDDDDD;
+}
+
+.nav-link.addlisting-link:hover {
+  color: #DDDDDD;
+}
+
+.nav-link.addlisting-link {
+  color: #FFFFFF;
+  font-family: $headers-font;
+  font-weight: bold;
 }
