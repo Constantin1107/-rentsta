@@ -2,7 +2,7 @@
   background-size: contain;
   background-position: center;
   padding: 150px 0;
-  height: 600px; /* Increase the height to make the image larger */
+  height: 600px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,6 @@
   margin: 0 10px;
 }
 
-
 .card-category {
   display: flex;
   flex-wrap: wrap;
@@ -61,7 +60,32 @@
   padding: 10px;
 }
 
-.listing-item h5.card-title {
+.listing-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.listing-info .listing-description {
   margin-top: 0;
   font-size: 18px;
+}
+
+.listing-info .listing-price {
+  margin-top: 0;
+  font-size: 18px;
+  text-align: right;
+}
+
+.card-title {
+  text-decoration: none;
+}
+
+.listing-description,
+.listing-price {
+  text-decoration: none;
+}
+
+.listing-item.card {
+  border-radius: 5px;
 }
