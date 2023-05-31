@@ -10,15 +10,22 @@
 </div>
 
 <div class="container">
-  <div class="card-category">
+  <div class="card-category ">
     <% @listings.each do |listing| %>
     <div class="listing-item card">
-      <%= cl_image_tag listing.photo.key, height: 200, width: 300, crop: :fill, class: "card-img-top" %>
+        <%= link_to listing_path(listing.id) do %>
+          <%= cl_image_tag listing.photo.key, height: 200, width: 300, crop: :fill, class: "card-img-top" %>
+        <% end %>
       <div class="card-body">
-        <h5 class="card-title"><%= link_to listing.name, listing_path(listing.id) %></h5>
+        <h5 class="card-title">
+          <%= link_to listing.name, listing_path(listing.id), style: "text-decoration: none; color: black;" %>
+        </h5>
+        <div class="listing-info">
+          <p class="listing-description"><%= listing.description %></p>
+          <p class="listing-price"><%= listing.price %></p>
+        </div>
       </div>
     </div>
     <% end %>
   </div>
 </div>
-

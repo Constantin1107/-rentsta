@@ -1,5 +1,6 @@
 <h2><%= @listing.name %></h2>
 <%= link_to 'Home', root_path, class: "btn button" %>
+<%= link_to 'Back', listings_path, class: "btn button" %>
 <ul>
   <li><%= @listing.price %></li>
   <li><%= @listing.description %></li>
