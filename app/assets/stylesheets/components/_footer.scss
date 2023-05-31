@@ -1,13 +1,14 @@
 .footer {
   background-color: #658864;
-  padding: 20px;
+  padding: 0px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   color: white;
   height: 426px;
-  position: sticky;
+
+  position: relative;
   left: 0;
   width: 100%;
   bottom: 0;

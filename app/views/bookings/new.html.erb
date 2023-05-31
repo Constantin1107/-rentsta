@@ -1,0 +1,10 @@
+<h1>Booking overview</h1>
+<%= link_to 'Home', root_path %>
+<ul>
+  <li><%= @listing.name %></li>
+  <li><%= @listing.price %></li>
+</ul>
+<%= simple_form_for [@listing, @booking] do |f| %>
+  <%= f.input :booking_date %>
+  <%= f.submit %>
+<% end %>

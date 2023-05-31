@@ -1,7 +1,12 @@
 <h1><%= @listing.name %></h1>
+<%= link_to 'Home', root_path %>
 <ul>
   <li><%= @listing.price %></li>
   <li><%= @listing.description %></li>
   <li><%= @listing.capacity %></li>
   <li><%= @listing.address %></li>
 </ul>
+<%= link_to 'Book', new_listing_booking_path(@listing.id) %>
+<% if @listing.user_id == current_user.id %>
+  <%= link_to 'Delete listing', listing_destroy_path(@listing.id), data: { turbo_method: :delete } %>
+<% end %>
