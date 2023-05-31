@@ -1,0 +1,67 @@
+.banner2 {
+  background-size: contain;
+  background-position: center;
+  padding: 150px 0;
+  height: 600px; /* Increase the height to make the image larger */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.banner2 h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.banner2 p {
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-container .btn {
+  margin: 0 10px;
+}
+
+
+.card-category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.listing-item {
+  width: 300px;
+  margin: 10px;
+}
+
+.listing-item img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px 4px 0 0;
+}
+
+.listing-item .card-body {
+  padding: 10px;
+}
+
+.listing-item h5.card-title {
+  margin-top: 0;
+  font-size: 18px;
+}

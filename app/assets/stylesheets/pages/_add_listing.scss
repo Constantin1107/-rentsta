@@ -7,11 +7,11 @@
 .button{
   background-color: #648864;
   color: white;
+}
 
-  &:hover{
-    background-color: #3f553f;
-    color: rgb(208, 206, 206);
-  }
+.button:hover{
+  background-color: #3f553f;
+  color: rgb(208, 206, 206);
 }
 
 #confirmation_background{
