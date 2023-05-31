@@ -1,11 +1,23 @@
-<h2>All listings</h2>
-<%= link_to 'Homepage', root_path, class: "btn button" %>
-<%= link_to 'Add listing', new_listing_path, class: "btn button" %>
-<ul>
-  <% @listings.each do |listing| %>
-  <li>
-    <%= link_to listing.name, listing_path(listing.id) %>
-    <%= cl_image_tag listing.photo.key, height: 300, width: 400, crop: :fill %>
-  </li>
-  <% end %>
-</ul>
+<div class="banner2 d-flex" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://c4.wallpaperflare.com/wallpaper/148/666/499/santiago-bernabeu-stadium-soccer-real-madrid-spain-wallpaper-preview.jpg);">
+  <div class="container w-50 d-flex justify-content-center flex-column align-items-center">
+    <h1>All Stadiums</h1>
+    <p>Change your life and book stadiums around the world.</p>
+    <div class="button-container">
+      <%= link_to 'Homepage', root_path, class: "btn button" %>
+      <%= link_to 'Add listing', new_listing_path, class: "btn button" %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card-category">
+    <% @listings.each do |listing| %>
+    <div class="listing-item card">
+      <%= cl_image_tag listing.photo.key, height: 200, width: 300, crop: :fill, class: "card-img-top" %>
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to listing.name, listing_path(listing.id) %></h5>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
