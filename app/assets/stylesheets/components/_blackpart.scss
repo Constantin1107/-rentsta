@@ -1,0 +1,44 @@
+.blackboxset {
+  background-color: black;
+  color: white;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 0px;
+  height: 90%;
+}
+
+.where_am_I {
+  color: rgb(110, 110, 110);
+  margin-bottom: 40px;
+}
+
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.howitworks {
+  flex: 1;
+  margin-right: 13px;
+  align-self: center;
+}
+
+.container3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.smoothb {
+  margin-top: 8px;
+
+}

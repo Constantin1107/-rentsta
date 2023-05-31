@@ -1,0 +1,17 @@
+.findstadiumnear {
+  padding-top: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Add this line */
+  // order: 2; /* Increase the order to move the text further down */
+}
+
+.discovertext {
+  color: #b6b6b6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Add this line */
+  // order: 2; /* Increase the order to move the text further down */
+}

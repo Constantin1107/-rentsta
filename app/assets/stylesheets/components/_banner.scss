@@ -4,13 +4,15 @@
   grid-gap: 50px;
   padding: 0;
   color: rgb(0, 0, 0);
+  overflow: hidden; /* Add this line to cut off the banner image */
 }
 
 .text-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  order: 1; /* Change the order to display the text on the left */
+  align-items: center; /* Add this line */
+  // order: 2; /* Increase the order to move the text further down */
 }
 
 .banner p {
@@ -22,7 +24,8 @@
 
 .banner .image {
   display: flex;
-  justify-content: flex-end; /* Align the image to the right side */
+  justify-content: flex-end; /* Uncomment this line to align the image to the right */
+  align-items: center; /* Add this line */
 }
 
 .banner .image img {
