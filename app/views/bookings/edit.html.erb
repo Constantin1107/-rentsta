@@ -1,5 +1,5 @@
-<h1>Booking overview</h1>
-<%= link_to 'Home', root_path %>
+<h2>Booking overview</h2>
+<%= link_to 'Home', root_path, class: "btn button" %>
 <ul>
   <li><%= @listing.name %></li>
   <li><%= @listing.price %>€</li>
@@ -7,4 +7,4 @@
   <%= f.input :booking_date %>
   <%= f.submit %>
 <% end %>
-<%= link_to 'Cancel booking', listing_booking_path(@booking.id, active: 'false'), data: { turbo_method: :put } %>
+<%= link_to 'Cancel booking', listing_booking_path(@booking.id, active: 'false'), data: { turbo_method: :put }, class: "btn button" %>
