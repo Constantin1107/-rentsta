@@ -33,7 +33,7 @@ class BookingsController < ApplicationController
   end
 
   private
-
+  
   def set_listing
     @listing = Listing.find(params[:listing_id])
   end
