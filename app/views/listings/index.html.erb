@@ -1,10 +1,11 @@
-<h1>All listings</h1>
-<%= link_to 'Homepage', root_path %>
-<%= link_to 'Add listing', new_listing_path %>
+<h2>All listings</h2>
+<%= link_to 'Homepage', root_path, class: "btn button" %>
+<%= link_to 'Add listing', new_listing_path, class: "btn button" %>
 <ul>
   <% @listings.each do |listing| %>
   <li>
     <%= link_to listing.name, listing_path(listing.id) %>
+    <%= cl_image_tag listing.photo.key, height: 300, width: 400, crop: :fill %>
   </li>
   <% end %>
 </ul>

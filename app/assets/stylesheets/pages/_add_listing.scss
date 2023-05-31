@@ -1,0 +1,15 @@
+#add_listing_picture{
+  background-image: url("https://i.pinimg.com/originals/d3/cf/02/d3cf02b81e0106ef33401c28c5bdb9fb.jpg");
+  height: 800px;
+  background-size: cover;
+}
+
+.button{
+  background-color: #648864;
+  color: white;
+
+  &:hover{
+    background-color: #3f553f;
+    color: rgb(208, 206, 206);
+  }
+}

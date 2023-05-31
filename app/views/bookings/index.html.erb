@@ -1,11 +1,11 @@
-<h1>Bookings</h1>
-<%= link_to 'Home', root_path %>
+<h2>Bookings</h2>
+<%= link_to 'Home', root_path, class: "btn button" %>
 <% @bookings.each do |booking| %>
   <ul>
     <li><%= booking.user.email %></li>
     <li><%= booking.listing.name %></li>
     <li><%= booking.booking_date %></li>
     <li><%= booking.active %></li>
-    <li><%= link_to 'Edit', edit_listing_booking_path(booking.listing.id, booking.id) %></li>
+    <li><%= link_to 'Edit', edit_listing_booking_path(booking.listing.id, booking.id), class: "btn button" %></li>
   </ul>
 <% end %>
