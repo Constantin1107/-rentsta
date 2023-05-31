@@ -4,7 +4,9 @@
 <ul>
   <% @listings.each do |listing| %>
   <li>
-    <%= link_to listing.name, listing_path(listing.id) %>
+    <%= link_to listing.name, listing_path(listing.id), class: "btn button" %>
+  </li>
+  <li>
     <%= cl_image_tag listing.photo.key, height: 300, width: 400, crop: :fill %>
   </li>
   <% end %>

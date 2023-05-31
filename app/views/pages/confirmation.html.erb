@@ -1,3 +1,7 @@
-<h2>Confirmation page</h2>
-<%= link_to 'Home', root_path, class: "btn button" %>
-<p>Thanks for booking with us <%= current_user.email %></p>
+<div class="container" id="confirmation_background">
+  <div class="card p-5 text-center align-items-center">
+    <h2>Booking confirmation</h2>
+    <%= link_to 'Home', root_path, class: "btn button" %>
+    <h3>Thanks for booking with us <%= current_user.email %></h3>
+  </div>
+</div>
