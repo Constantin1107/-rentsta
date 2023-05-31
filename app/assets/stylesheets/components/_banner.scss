@@ -1,0 +1,31 @@
+.banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  padding: 0;
+  color: rgb(0, 0, 0);
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  order: 1; /* Change the order to display the text on the left */
+}
+
+.banner p {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner .image {
+  display: flex;
+  justify-content: flex-end; /* Align the image to the right side */
+}
+
+.banner .image img {
+  max-width: 100%; /* Ensure the image fits fully */
+  height: auto;
+}
