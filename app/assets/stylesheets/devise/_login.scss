@@ -12,7 +12,26 @@
 }
 
 .form-actions {
-  /* Add any additional styling for form actions */
+  display: flex;
+  justify-content: center; /* Center the contents horizontally */
+  align-items: center; /* Center the contents vertically */
+  margin-top: 10px; /* Add margin to separate from the form inputs */
+}
+
+.login-submit-button {
+  background-color: #FF5C00;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  width: 133px;
+  height: 44px;
+}
+
+.login-submit-button:hover {
+  background: #CC0000;
 }
 
 .login-input {
@@ -27,17 +46,6 @@
   }
 }
 
-.login-submit-button {
-  width: 133px;
-  height: 44px;
-  text-align: center;
-  background: #FF0000;
-  color: white;
-  border: none;
-  border-radius: 4px;
+.signup-button {
   margin-top: 10px;
-}
-
-.login-submit-button:hover {
-  background: #CC0000;
 }
