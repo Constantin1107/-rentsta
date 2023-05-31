@@ -6,5 +6,5 @@
 </ul>
 <%= simple_form_for [@listing, @booking] do |f| %>
   <%= f.input :booking_date %>
-  <%= f.submit %>
+  <%= f.button :submit, "Book!", class: "button" %>
 <% end %>
