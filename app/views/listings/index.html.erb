@@ -1,4 +1,4 @@
-<div class="banner2 d-flex" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://c4.wallpaperflare.com/wallpaper/148/666/499/santiago-bernabeu-stadium-soccer-real-madrid-spain-wallpaper-preview.jpg);">
+<div class="banner2 d-flex" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.immediate.co.uk/production/volatile/sites/3/2020/05/GettyImages-72599595-54af419.jpg);">
   <div class="container w-50 d-flex justify-content-center flex-column align-items-center">
     <h1>All Stadiums</h1>
     <p>Change your life and book stadiums around the world.</p>
@@ -10,7 +10,7 @@
 </div>
 
 <div class="container">
-  <div class="card-category ">
+  <div class="card-category">
     <% @listings.each do |listing| %>
     <div class="listing-item card">
         <%= link_to listing_path(listing.id) do %>
@@ -21,7 +21,7 @@
           <%= link_to listing.name, listing_path(listing.id), style: "text-decoration: none; color: black;" %>
         </h5>
         <div class="listing-info">
-          <p class="listing-description"><%= listing.description %></p>
+          <p class="listing-description"><%= listing.address %></p>
           <p class="listing-price"><%= listing.price %></p>
         </div>
       </div>
