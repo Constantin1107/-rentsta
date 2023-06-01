@@ -15,6 +15,16 @@
   margin-left: auto; /* Shift container to the right */
 }
 
+.listing-namex {
+  color: black;
+  margin: 0;
+}
+
+.fa-solid.fa-person-seat {
+  font-family: $body-font;
+  margin: 15px;
+}
+
 .price-container {
   background-color: #F7F7F7;
   border: 1px solid #E2E2E2;
@@ -28,6 +38,10 @@
   font-weight: bold;
   margin: 0;
   margin-bottom: 10px;
+}
+
+.btn.button:hover {
+  background-color: #ff2a00;
 }
 
 .price-container .btn {
@@ -52,7 +66,10 @@
   height: 700px;
   background-color: #D9D9D9;
   display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
 }
+
 
 .container-listing-indv {
   flex: 1;
@@ -74,7 +91,7 @@
 }
 
 .carousel-item img {
-  height: 100%;
+  height: 700px;
   width: 100%;
   object-fit: fill;
 }
@@ -85,5 +102,37 @@
   background-color: black;
   color: white;
   display: flex;
+}
+
+.listing-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  padding: 20px;
+}
+
+.listing-details h2 {
+  margin-bottom: 10px;
+}
+
+.map-container {
+  flex: 1;
+  height: 100%;
+}
+
+
+.homeandback {
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute; /* Position the buttons */
+  top: 10px; /* Distance from the top */
+  left: 10px; /* Distance from the left */
+}
+
+.homeandback .btn {
+  margin-right: 10px;
 }

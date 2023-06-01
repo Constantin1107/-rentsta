@@ -1,22 +1,26 @@
 <div class="container-show">
-  <div class="container-listing-indv">
-    <div class="listing-container">
-      <h2><%= @listing.name %></h2>
-    </div>
-    <div>
-      <i class="fa-solid fa-person-seat" style="color: #658864;"></i> <%= @listing.capacity %>
-    </div>
-      <div class="image-price-container">
-        <div class="price-container">
-    <div>
-      <i class="fa-sharp fa-solid fa-location-dot" style="color: #658865;"></i> <%= @listing.address %>
-    </div>
-          <p><%= @listing.price %></p>
-          <%= link_to 'Book', new_listing_booking_path(@listing.id), class: "btn button" %>
-        </div>
+  <div class="homeandback d-flex">
     <%= link_to 'Home', root_path, class: "btn button" %>
     <%= link_to 'Back', listings_path, class: "btn button" %>
-      </div>
+  </div>
+  <div class="containerbtnshow">
+  </div>
+  <div class="container-listing-indv">
+    <div class="listing-container">
+    <h1 class="listing-namex"><%= @listing.name %></h1>
+    </div>
+    <div>
+      <h2 style="black"><i class="fa-sharp fa-solid fa-location-dot" style="color: black;"></i> <%= @listing.address %></h2>
+    </div>
+    <div>
+      <h3 class="fa-solid fa-person-seat"> Capacity <%= @listing.capacity %></h3>
+    </div>
+      <%# <div class="image-price-container">
+        <div class="price-container">
+          <p><%= @listing.price %></p>
+<%= link_to 'Book', new_listing_booking_path(@listing.id), class: "btn button", style: "background-color: #FF5C00;" %>
+        <%# </div> %>
+      <%# </div> %>
     <% if @listing.user_id == current_user.id %>
       <%= link_to 'Delete listing', listing_destroy_path(@listing.id), data: { turbo_method: :delete }, class: "btn button" %>
     <% end %>
@@ -42,15 +46,18 @@
   </div>
 </div>
 <div class="containerblackshow">
-  <h2><%= @listing.name %></h2>
-   <div>
-      <i class="fa-solid fa-book"></i> <%= @listing.description %>
+  <div class="listing-details">
+    <h2><%= @listing.name %></h2>
+    <div>
+      <%= @listing.description %>
     </div>
-
-  <%# map %>
-  <div style="width: 100%; height: 600px;"
-    data-controller="map"
-    data-map-markers-value="<%= @marker.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+  <div class="map-container">
+    <div style="width: 100%; height: 700px;"
+      data-controller="map"
+      data-map-markers-value="<%= @marker.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
 </div>
+

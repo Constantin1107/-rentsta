@@ -1,10 +1,12 @@
 .blackboxset {
   background-color: black;
   color: white;
-  height: 550px;
+  height: 700px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start; /* Align items to the top left */
+  align-items: flex-start; /* Align items to the top left */
+  padding: 40px; /* Add padding to create space around the text */
+  align-items: stretch;
 }
 
 .container1 {
@@ -18,12 +20,22 @@
 .where_am_I {
   color: rgb(110, 110, 110);
   margin-bottom: 40px;
+  margin-top: 0; /* Remove default margin from the top */
 }
 
 .container2 {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Align items to the left */
   flex-grow: 1;
+  align-items: stretch;
+}
+
+.container3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-left: 293px;
 }
 
 .howitworks {
@@ -32,13 +44,18 @@
   align-self: center;
 }
 
-.container3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.hprice{
+  flex: 1;
+  margin-top: 28px;
+  margin-bottom: 50px;
 }
 
 .smoothb {
-  margin-top: 8px;
-
+  flex: 1;
+  margin-top: 50px;
+}
+.hrsw {
+  flex: 1;
+  margin-bottom: 50px;
+  margin-top: 48px;
 }
