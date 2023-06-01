@@ -1,10 +1,32 @@
-<h2>Inbox</h2>
-<% @bookings.each do |booking| %>
-    <ul>
-      <li><%= booking.listing.name %></li>
-      <li><%= booking.booking_date %></li>
-      <li><%= booking.status %></li>
-    </ul>
-    <%= link_to 'Accept booking', booking_accept_path(booking.id), data: { turbo_method: :patch } %>
-    <%= link_to 'Reject booking', booking_reject_path(booking.id), data: { turbo_method: :patch } %>
-<% end %>
+<div class="inbox-container">
+  <h2>Inbox</h2>
+
+  <table class="inbox-table">
+    <thead>
+      <tr>
+        <th>Stadium</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @bookings.each do |booking| %>
+        <tr>
+          <td><%= booking.listing.name %></td>
+          <td><%= booking.booking_date %></td>
+          <td><%= booking.status %></td>
+          <td>
+            <%= link_to booking_accept_path(booking.id), data: { turbo_method: :patch } do %>
+              <i class="fa-solid fa-futbol" style="color: #658864;"></i>
+            <% end %>
+            <%= link_to booking_reject_path(booking.id), data: { turbo_method: :patch } do %>
+              <i class="fa-solid fa-futbol" style="color: #ff5c00;"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
