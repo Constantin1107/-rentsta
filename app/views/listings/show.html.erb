@@ -46,4 +46,11 @@
    <div>
       <i class="fa-solid fa-book"></i> <%= @listing.description %>
     </div>
+
+  <%# map %>
+  <div style="width: 100%; height: 600px;"
+    data-controller="map"
+    data-map-markers-value="<%= @marker.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
