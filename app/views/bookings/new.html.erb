@@ -1,11 +1,11 @@
 <div class="booking-container">
   <div class="left-half">
     <div class="image-booking">
-     <% @listing.photos.each_with_index do |photo, index| %>
-          <div class="carousel-item <%= 'active' if index == 0 %>">
-            <%= cl_image_tag photo.key, class: "d-block w-100", crop: :fill %>
-          </div>
-        <% end %>
+      <% @listing.photos.each_with_index do |photo, index| %>
+        <div class="carousel-item <%= 'active' if index == 0 %>">
+          <%= cl_image_tag photo.key, class: "d-block w-100", crop: :fill %>
+        </div>
+      <% end %>
     </div>
   </div>
 
@@ -25,10 +25,12 @@
         </p>
       </div>
       <%= simple_form_for [@listing, @booking] do |f| %>
-        <%= f.input :booking_date %>
-        <%= f.button :submit, "Book!", class: "button" %>
+        <%= f.input :booking_date, label_html: { class: "booking-date-label" }, input_html: { class: "booking-date-input" } %>
+        <div class="button-container">
+          <%= f.button :submit, "Book", class: "button" %>
+          <%= link_to 'Back', request.referer, class: "btn button" %>
+        </div>
       <% end %>
-       <%= link_to 'Home', root_path, class: "btn button" %>
     </div>
   </div>
 </div>
