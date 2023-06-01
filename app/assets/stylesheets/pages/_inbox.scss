@@ -1,0 +1,35 @@
+.inbox-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.inbox-container {
+  height: 500px;
+}
+
+.inbox-table th,
+.inbox-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  width: 33.33%; /* Equal width for all columns */
+}
+
+.inbox-table th {
+  background-color: #f2f2f2;
+}
+
+.inbox-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.inbox-table tbody tr:hover {
+  background-color: #eaeaea;
+}
+
+.inbox-table a {
+  margin-right: 5px;
+  color: #333;
+  text-decoration: none;
+}
