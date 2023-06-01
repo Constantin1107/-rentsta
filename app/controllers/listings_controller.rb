@@ -1,10 +1,6 @@
 class ListingsController < ApplicationController
   def index
-    @markers = @listings.geocoded.map do |listing|
-      {
-        lat: listing.latitude,
-        lng: listing.longitude
-      }
+    map
     if params[:search]&.[](:query).present?
       @listings = Listing.search_by_name_and_address(params[:search][:query])
     else
@@ -50,6 +46,16 @@ class ListingsController < ApplicationController
   end
 
   private
+
+  def map
+    @listings = Listing.all
+    @markers = @listings.geocoded.map do |listing|
+      {
+        lat: listing.latitude,
+        lng: listing.longitude
+      }
+    end
+  end
 
   def listing_params
     params.require(:listing).permit(:name, :address, :user_id, :price, :description, :capacity, photos: [])
