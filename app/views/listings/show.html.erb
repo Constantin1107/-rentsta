@@ -18,7 +18,7 @@
       <%# <div class="image-price-container">
         <div class="price-container">
           <p><%= @listing.price %></p>
-<%= link_to 'Book', new_listing_booking_path(@listing.id), class: "btn button", style: "background-color: #FF5C00;" %>
+          <%= link_to 'Book', new_listing_booking_path(@listing.id), class: "btn button", style: "background-color: #FF5C00;" %>
         <%# </div> %>
       <%# </div> %>
     <% if @listing.user_id == current_user.id %>
@@ -60,4 +60,3 @@
     </div>
   </div>
 </div>
-

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :listings do
     resources :bookings, only: %i[index new create edit update]
   end
+
   get '/confirmation', to: 'pages#confirmation'
   get '/my_listings', to: 'pages#my_listings'
   get '/edit_account', to: 'pages#edit_acccount'
