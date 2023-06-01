@@ -1,0 +1,10 @@
+<h2>Inbox</h2>
+<% @bookings.each do |booking| %>
+    <ul>
+      <li><%= booking.listing.name %></li>
+      <li><%= booking.booking_date %></li>
+      <li><%= booking.status %></li>
+    </ul>
+    <%= link_to 'Accept booking', booking_accept_path(booking.id), data: { turbo_method: :patch } %>
+    <%= link_to 'Reject booking', booking_reject_path(booking.id), data: { turbo_method: :patch } %>
+<% end %>

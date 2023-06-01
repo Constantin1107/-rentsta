@@ -1,0 +1,10 @@
+<h2>Booking requests</h2>
+<% @bookings.each do |booking| %>
+  <% if booking.user_id == current_user.id %>
+    <ul>
+      <li><%= booking.listing.name %></li>
+      <li><%= booking.booking_date %></li>
+      <li><%= booking.status %></li>
+    </ul>
+  <% end %>
+<% end %>

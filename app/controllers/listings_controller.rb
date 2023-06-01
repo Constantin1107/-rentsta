@@ -10,6 +10,7 @@ class ListingsController < ApplicationController
 
   def show
     @listing = Listing.find(params[:id])
+    @bookings = Booking.where(status: 0)
     @marker = @listing.geocode.map do
       {
         lat: @listing.latitude,
