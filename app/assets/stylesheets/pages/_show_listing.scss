@@ -52,7 +52,10 @@
   height: 700px;
   background-color: #D9D9D9;
   display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
 }
+
 
 .container-listing-indv {
   flex: 1;
@@ -74,7 +77,7 @@
 }
 
 .carousel-item img {
-  height: 100%;
+  height: 700px;
   width: 100%;
   object-fit: fill;
 }
@@ -85,5 +88,17 @@
   background-color: black;
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: left;
+}
+
+.homeandback {
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+
+}
+
+.homeandback .btn {
+  margin-right: 10px;
 }

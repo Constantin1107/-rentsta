@@ -1,22 +1,26 @@
 <div class="container-show">
+  <div class="containerbtnshow">
+    <div class="homeandback d-flex">
+      <%= link_to 'Home', root_path, class: "btn button" %>
+      <%= link_to 'Back', listings_path, class: "btn button" %>
+    </div>
+  </div>
   <div class="container-listing-indv">
     <div class="listing-container">
-      <h2><%= @listing.name %></h2>
+    <h2><%= @listing.name %></h2>
+    </div>
+    <div>
+      <i class="fa-sharp fa-solid fa-location-dot" style="color: #658865;"></i> <%= @listing.address %>
     </div>
     <div>
       <i class="fa-solid fa-person-seat" style="color: #658864;"></i> <%= @listing.capacity %>
     </div>
-      <div class="image-price-container">
+      <%# <div class="image-price-container">
         <div class="price-container">
-    <div>
-      <i class="fa-sharp fa-solid fa-location-dot" style="color: #658865;"></i> <%= @listing.address %>
-    </div>
           <p><%= @listing.price %></p>
-          <%= link_to 'Book', new_listing_booking_path(@listing.id), class: "btn button" %>
-        </div>
-    <%= link_to 'Home', root_path, class: "btn button" %>
-    <%= link_to 'Back', listings_path, class: "btn button" %>
-      </div>
+<%= link_to 'Book', new_listing_booking_path(@listing.id), class: "btn button", style: "background-color: #FF5C00;" %>
+        <%# </div> %>
+      <%# </div> %>
     <% if @listing.user_id == current_user.id %>
       <%= link_to 'Delete listing', listing_destroy_path(@listing.id), data: { turbo_method: :delete }, class: "btn button" %>
     <% end %>
