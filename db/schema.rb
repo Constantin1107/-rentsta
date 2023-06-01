@@ -46,7 +46,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_31_032517) do
     t.bigint "user_id"
     t.bigint "listing_id"
     t.datetime "booking_date"
-    t.string "active", default: "true"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["listing_id"], name: "index_bookings_on_listing_id"
