@@ -79,5 +79,8 @@ group :test do
 
 end
 
+# added gems
+
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
+gem "geocoder"
