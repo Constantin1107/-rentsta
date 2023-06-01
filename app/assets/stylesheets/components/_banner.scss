@@ -32,3 +32,21 @@
   max-width: 100%; /* Ensure the image fits fully */
   height: auto;
 }
+
+.imagemain {
+  height: 700px;
+}
+
+.image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image img {
+  height: 100%;
+  width: auto;
+}
+
