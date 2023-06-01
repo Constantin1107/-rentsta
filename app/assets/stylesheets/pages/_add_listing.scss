@@ -3,6 +3,16 @@
   height: 800px;
   background-size: cover;
 }
+.container_new {
+  background-color: #D9D9D9;
+  // padding-top: 40px; /* Add this line to remove padding */
+  // margin-top: 40px; /* Add this line to remove margin */
+  // padding-bottom: 80px; /* Add this line to remove padding */
+  // margin-bottom: 80px;
+  padding: 40px;
+  margin: 40px;
+}
+
 
 .button{
   background-color: #648864;
@@ -17,4 +27,25 @@
 #confirmation_background{
   background-image: url("https://images.bild.de/62b1b9bea21483602ed17326/3bd3bc6bcfd9a490d9d3f2dcc3f407b7,b5d4a91e?w=1280.jpg");
   height: 600px;
+}
+
+.container_imagejeff {
+  background-image: url("https://i8.amplience.net/i/naras/jeff-goldblum-jazz-album-i-shouldnt-be-telling-you-this-goldblum-505-2.jpg.jpg?w=821&sm=c");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.container_imagejeff h6 {
+  margin-top: 0;
+  margin-right: 0;
+  text-align: left;
+  color: #D9D9D9;
 }
