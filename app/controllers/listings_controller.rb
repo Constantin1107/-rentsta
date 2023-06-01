@@ -1,6 +1,10 @@
 class ListingsController < ApplicationController
   def index
-    @listings = Listing.all
+    if params[:search]&.[](:query).present?
+      @listings = Listing.search_by_name_and_address(params[:search][:query])
+    else
+      @listings = Listing.all
+    end
   end
 
   def show
