@@ -12,20 +12,24 @@
 <div class="container">
   <div class="card-category">
     <% @listings.each do |listing| %>
-    <div class="listing-item card">
+      <div class="listing-item card">
         <%= link_to listing_path(listing.id) do %>
-          <%= cl_image_tag listing.photos.key, height: 200, width: 300, crop: :fill, class: "card-img-top" %>
+          <% if listing.photos.attached? %>
+            <%= cl_image_tag listing.photos.first.key, height: 200, width: 300, crop: :fill, class: "card-img-top" %>
+          <% else %>
+            <span>No photo available</span>
+          <% end %>
         <% end %>
-      <div class="card-body">
-        <h5 class="card-title">
-          <%= link_to listing.name, listing_path(listing.id), style: "text-decoration: none; color: black;" %>
-        </h5>
-        <div class="listing-info">
-          <p class="listing-description"><%= listing.address %></p>
-          <p class="listing-price"><%= listing.price %>€</p>
+        <div class="card-body">
+          <h5 class="card-title">
+            <%= link_to listing.name, listing_path(listing.id), style: "text-decoration: none; color: black;" %>
+          </h5>
+          <div class="listing-info">
+            <p class="listing-description"><%= listing.address %></p>
+            <p class="listing-price"><%= listing.price %>€</p>
+          </div>
         </div>
       </div>
-    </div>
     <% end %>
   </div>
 </div>
