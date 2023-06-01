@@ -7,4 +7,8 @@ class PagesController < ApplicationController
   def confirmation
     @booking = current_user.bookings.last
   end
+
+  def my_listings
+    @listings = Listing.where(user_id: current_user.id)
+  end
 end
