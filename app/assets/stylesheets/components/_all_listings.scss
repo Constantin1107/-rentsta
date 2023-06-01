@@ -106,7 +106,8 @@
 }
 
 #sticky{
-    height: 100vh;
-    position: sticky;
-    top: 84px;
+  height: 100vh;
+  position: sticky;
+  top: -1px;
+  padding-top: 0;
 }
