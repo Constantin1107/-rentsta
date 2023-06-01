@@ -40,8 +40,16 @@
   margin-bottom: 10px;
 }
 
-.btn.button:hover {
-  background-color: #ff2a00;
+.btn.button.deletelisting:hover {
+  background-color: #465d45;
+  color: white;
+}
+.btn.button.booklisting {
+  background-color: #FF5C00;
+}
+.btn.button.booklisting:hover {
+  background-color: #d64f00;
+  color: white;
 }
 
 .price-container .btn {
@@ -135,4 +143,12 @@
 
 .homeandback .btn {
   margin-right: 10px;
+}
+
+.deletelisting {
+  margin-top: 20px;
+}
+
+.deletelisting:hover {
+  background-color: #465d45;
 }
