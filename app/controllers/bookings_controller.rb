@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
-  before_action :set_listing, only: %i[new create edit]
+  before_action :set_listing, only: %i[new create]
+  before_action :set_booking, only: %i[accept reject]
 
   def index
     @bookings = Booking.where(user_id: current_user.id)
@@ -29,10 +30,34 @@ class BookingsController < ApplicationController
     else
       @booking.update(booking_params)
     end
-    redirect_to listing_bookings_path(2)
+    redirect_to bookings_path
+  end
+
+  # PATCH /bookings/:id/accept
+  # @TODO authorize that the user should actually be allowed the booking
+  def accept
+    if @booking.accepted!
+      redirect_to @booking, notice: 'Booking accepted'
+    else
+      redirect_to @booking, notice: 'Booking could not be accepted - please try again'
+    end
+  end
+
+  # PATCH /bookings/:id/reject
+  # @TODO authorize that the user should actually be reject the booking
+  def reject
+    if @booking.rejected!
+      redirect_to @booking, notice: 'Booking rejected'
+    else
+      redirect_to @booking, notice: 'Booking could not be rejected - please try again'
+    end
   end
 
   private
+
+  def set_booking
+    @booking = Booking.find(params[:booking_id])
+  end
 
   def set_listing
     @listing = Listing.find(params[:listing_id])

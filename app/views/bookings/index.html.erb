@@ -5,7 +5,7 @@
     <li><%= booking.user.email %></li>
     <li><%= booking.listing.name %></li>
     <li><%= booking.booking_date %></li>
-    <li><%= booking.active %></li>
-    <li><%= link_to 'Edit', edit_listing_booking_path(booking.listing.id, booking.id), class: "btn button" %></li>
+    <li><%= booking.status %></li>
+    <li><%= link_to 'Edit', edit_booking_path(booking.id), class: "btn button" %></li>
   </ul>
 <% end %>
