@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def confirmation
     @booking = current_user.bookings.last
+    @listing = @booking.listing if @booking.present?
   end
 
   def my_listings
