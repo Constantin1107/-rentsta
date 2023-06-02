@@ -25,6 +25,7 @@ class BookingsController < ApplicationController
   end
 
   def confirmation
+    @listing = Listing.find(params[:listing])
     @booking = Booking.find_by(listing_id: params[:listing_id])
   end
 
