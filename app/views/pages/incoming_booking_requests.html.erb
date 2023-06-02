@@ -1,32 +1,52 @@
 <div class="inbox-container">
+   <% if flash[:notice] %>
+    <div class="notice-container">
+      <div class="notice">
+        <%= flash[:notice] %>
+        <span class="close-notice" onclick="this.parentNode.parentNode.remove()">&times;</span>
+      </div>
+    </div>
+  <% end %>
+
   <h2>Inbox</h2>
 
-  <table class="inbox-table">
-    <thead>
-      <tr>
-        <th>Stadium</th>
-        <th>Date</th>
-        <th>Status</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @bookings.each do |booking| %>
+  <div class="table-container">
+    <table class="inbox-table">
+      <thead>
         <tr>
-          <td><%= booking.listing.name %></td>
-          <td><%= booking.booking_date %></td>
-          <td><%= booking.status %></td>
-          <td>
-            <%= link_to booking_accept_path(booking.id), data: { turbo_method: :patch } do %>
-              <i class="fa-solid fa-futbol" style="color: #658864;"></i>
-            <% end %>
-            <%= link_to booking_reject_path(booking.id), data: { turbo_method: :patch } do %>
-              <i class="fa-solid fa-futbol" style="color: #ff5c00;"></i>
-            <% end %>
-          </td>
+          <th>Stadium</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Decision</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% @bookings.each do |booking| %>
+          <tr>
+            <td><%= booking.listing.name %></td>
+            <td><%= booking.booking_date %></td>
+            <td><%= booking.status %></td>
+            <td>
+            <% if booking.status == 'pending' %>
+              <%= link_to booking_accept_path(booking.id), data: { turbo_method: :patch } do %>
+                <i class="fa-solid fa-futbol" style="color: #658864;"></i>
+              <% end %>
+              <%= link_to booking_reject_path(booking.id), data: { turbo_method: :patch } do %>
+                <i class="fa-solid fa-futbol" style="color: #ff5c00;"></i>
+              <% end %>
+            <% elsif booking.status == 'accepted' %>
+              <%= link_to booking_reject_path(booking.id), data: { turbo_method: :patch } do %>
+                <i class="fa-solid fa-futbol" style="color: #ff5c00;"></i>
+              <% end %>
+            <% else %>
+              <%= link_to booking_accept_path(booking.id), data: { turbo_method: :patch } do %>
+                <i class="fa-solid fa-futbol" style="color: #658864;"></i>
+              <% end %>
+            <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
-
