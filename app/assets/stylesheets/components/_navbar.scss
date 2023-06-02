@@ -71,48 +71,31 @@ h1 {
   font-weight: bold;
 }
 
-.search-form-control-2 {
-  position: relative;
-  z-index: 1; /* Add this line to ensure the search form appears below the navbar */
-  height: 4px;
-}
-
-.search-form-control-2 .btn {
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
-  color: #658864;
-  border-radius: 15px;
-}
-
-.search-form-control-2 .form-control {
-  height: 3.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.search-form-control-2 .form-control:focus {
-  border: 1px solid #1EDD88;
-  outline: none !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
 .search-form-control {
-  flex: 1; /* Add this line to make the search input field take up remaining space */
+  flex: 1;
+  display: flex;
+  align-items: center; /* Center vertically within the form */
 }
 
 .search-form-control .btn {
-  margin-left: 8px; /* Add this line to create some space between the input field and button */
+  margin-left: 8px;
 }
+
 .search-form-control .form-control {
-  height: 2.5rem; /* Adjust the height as desired */
-  background-color: #DDDDDD; /* Set the background color to #DDDDDD */
-  border-color: #DDDDDD; /* Set the border color to #DDDDDD */
+  height: 2.5rem;
+  background-color: #DDDDDD;
+  border-color: #DDDDDD;
 }
 
 .search-form-control .form-control:focus {
-  outline-color: #DDDDDD; /* Set the outline color to #DDDDDD */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  outline-color: #DDDDDD;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
+
 .search-form {
-  margin-top: 12px; /* Adjust the margin-top value as desired */
+  margin-top: 12px;
+  margin-left: 410px;
+  display: flex;
+  justify-content: center;
+  //* Center horizontally within the navbar */
 }

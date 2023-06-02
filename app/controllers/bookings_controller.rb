@@ -15,9 +15,14 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
+    @listing = Listing.find(params[:listing_id])
     @booking.listing_id = @listing.id
     @booking.save
-    redirect_to confirmation_path(listing_id: @listing.id)
+    redirect_to booking_confirmation_path(listing_id: @listing.id)
+  end
+
+  def confirmation
+    @booking = Booking.find_by(listing_id: params[:listing_id])
   end
 
   def edit
