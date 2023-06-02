@@ -6,6 +6,8 @@
         <%= simple_form_for(@listing, html: { multipart: true }) do |f| %>
           <%= f.input :name, placeholder: 'Give your stadium a name...' %>
           <%= f.input :address, placeholder: 'Where is your stadium...' %>
+          <%= f.input :city, placeholder: 'What city is your stadium in...' %>
+          <%= f.input :country, placeholder: 'What country is your stadium in...' %>
           <%= f.input :description, placeholder: 'Give your stadium a description...' %>
           <%= f.input :capacity, placeholder: 'How many people does your stadium seat...' %>
           <%= f.input :price, placeholder: 'How much do you want to charge...' %>
