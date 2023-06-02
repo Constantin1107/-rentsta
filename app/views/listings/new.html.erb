@@ -3,9 +3,11 @@
     <div class="row">
       <div class="col-md-6">
         <h2>Add your Stadium</h2>
-        <%= simple_form_for(@listing, html: { multipart: true }) do |f| %>
+        <%= simple_form_for(@listing) do |f| %>
           <%= f.input :name, placeholder: 'Give your stadium a name...' %>
+          <%= f.input :country, as: :select, collection: Listing::COUNTRIES %>
           <%= f.input :address, placeholder: 'Where is your stadium...' %>
+          <%= f.input :city, placeholder: 'What city is your stadium in...' %>
           <%= f.input :description, placeholder: 'Give your stadium a description...' %>
           <%= f.input :capacity, placeholder: 'How many people does your stadium seat...' %>
           <%= f.input :price, placeholder: 'How much do you want to charge...' %>
