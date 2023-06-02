@@ -12,11 +12,11 @@ class PagesController < ApplicationController
     @listings = Listing.where(user_id: current_user.id)
   end
 
-  def incoming_booking_requests
+  def inbox
     @bookings = Booking.for(current_user)
   end
 
-  def outgoing_booking_requests
+  def my_bookings
     @bookings = Booking.where(user_id: current_user.id)
   end
 
