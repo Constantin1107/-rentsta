@@ -1,6 +1,6 @@
 <div class="containerconfirmation">
-  <% if @listing.present? && @listing.photo.present? %>
-    <div class="bannerconfirmation h-700" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @listing.photo.first.key %>');">
+  <% if @listing.present? && @listing.photos.attached? %>
+    <div class="bannerconfirmation h-700" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @listing.photos.first.key %>');">
   <% else %>
     <div class="bannerconfirmation h-700">
   <% end %>
