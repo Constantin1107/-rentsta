@@ -16,8 +16,8 @@
 
 .container {
   display: flex;
-  justify-content: space-around;
-  margin: 20px;
+  justify-content: space-center;
+  margin-bottom: 40px;
 }
 
 .textbox {
@@ -52,7 +52,7 @@ p {
   position:absolute;
   font-family: $headers-font;
   bottom: 7px;
-  left: 15px;
+  left: 40px;
 }
 
 .logo h1 {
@@ -62,14 +62,4 @@ p {
   font-size: 64px;
   line-height: 80px;
   margin: 0;
-}
-
-.icon-container {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.icon-container i {
-  margin: 5px;
 }
