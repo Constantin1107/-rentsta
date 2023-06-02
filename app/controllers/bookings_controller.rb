@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     @booking.user_id = current_user.id
     @booking.listing_id = @listing.id
     @booking.save
-    redirect_to confirmation_path
+    redirect_to confirmation_path(listing_id: @listing.id)
   end
 
   def edit

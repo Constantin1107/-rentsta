@@ -1,0 +1,14 @@
+<div class="bannerconfirmation">
+  <% @listings.each do |listing| %>
+    <div class="listing-item card">
+      <% listing.photos.each_with_index do |photo, index| %>
+        <%= cl_image_tag photo.key, class: "d-block w-100", crop: :fill %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="containerconfirmation">
+    <h1>THANK YOU FOR BOOKING WITH RENTSTA!</h1>
+    <h3>Enjoy your time at <%= @booking.listing.name %></h3>
+  </div>
+</div>
