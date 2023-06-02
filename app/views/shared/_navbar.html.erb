@@ -33,10 +33,10 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to 'Add Stadium', new_listing_path, class: "dropdown-item"  %>
               <%= link_to 'My listings', my_listings_path, class: "dropdown-item"  %>
-              <%# <%= link_to 'My bookings', bookings_path, class: "dropdown-item"%> 
+              <%# <%= link_to 'My bookings', bookings_path, class: "dropdown-item"%>
+              <%= link_to 'Inbox', incoming_booking_requests_path, class: "dropdown-item"  %>
               <%= link_to 'My bookings', outgoing_booking_requests_path, class: "dropdown-item"  %>
               <%= link_to 'Edit account details', edit_account_path, class: "dropdown-item"  %>
-              <%= link_to 'Inbox', incoming_booking_requests_path, class: "dropdown-item"  %>
               <%= link_to "Logout", destroy_user_session_path, class: "dropdown-item", data: { turbo_method: :delete } %>
             </div>
           </li>
