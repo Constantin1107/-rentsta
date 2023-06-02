@@ -14,11 +14,14 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.user_id = current_user.id
+    @booking.user = current_user
     @listing = Listing.find(params[:listing_id])
-    @booking.listing_id = @listing.id
-    @booking.save
-    redirect_to booking_confirmation_path(listing_id: @listing.id)
+    @booking.listing = @listing
+    if @booking.save
+      redirect_to booking_confirmation_path(listing: @listing)
+    else
+      render 'bookings/new', status: :unprocessable_entity
+    end
   end
 
   def confirmation
