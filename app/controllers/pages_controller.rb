@@ -20,4 +20,7 @@ class PagesController < ApplicationController
   def outgoing_booking_requests
     @bookings = Booking.where(user_id: current_user.id)
   end
+
+  def edit_account
+  end
 end
