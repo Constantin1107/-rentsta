@@ -4,6 +4,8 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.where(user_id: current_user.id)
+    flash.now[:notice] = 'Booking accepted' if params[:accepted]
+    flash.now[:notice] = 'Booking rejected' if params[:rejected]
   end
 
   def new

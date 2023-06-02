@@ -6,22 +6,33 @@
 
 .inbox-container {
   height: 500px;
+  padding: 40px;
+  font-family: $body-font;
+}
+
+.table-container {
+  height: calc(95% - 40px); /* Adjust as needed */
+  overflow-y:auto;
+}
+
+.inbox-table {
+  margin-top: 20px;
 }
 
 .inbox-table th,
 .inbox-table td {
-  padding: 8px;
+  padding: 15px;
   text-align: left;
-  border-bottom: 1px solid #ccc;
-  width: 33.33%; /* Equal width for all columns */
+  border-bottom: 2px solid #ccc;
+  width: 25%; /* Equal width for all columns */
 }
 
 .inbox-table th {
-  background-color: #f2f2f2;
+  background-color: #f4f4f4;
 }
 
 .inbox-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
 }
 
 .inbox-table tbody tr:hover {
@@ -29,7 +40,45 @@
 }
 
 .inbox-table a {
-  margin-right: 5px;
+  margin-right: 10px;
   color: #333;
   text-decoration: none;
+}
+
+.notice-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notice {
+  position:relative;
+  padding: 10px 20px;
+  background-color: #eaeaea;
+  color: #000000;
+  border: 2px solid #eaeaea;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  width: 200px; /* Adjust the width as desired */
+  height: 100px;
+}
+
+.close-notice {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-notice:hover {
+  color: #ff0000;
 }
