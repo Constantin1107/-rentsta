@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   get '/edit_account', to: 'pages#edit_account'
   get '/incoming_booking_requests', to: 'pages#incoming_booking_requests'
   get '/outgoing_booking_requests', to: 'pages#outgoing_booking_requests'
+  get '/booking_confirmation', to: 'bookings#confirmation', as: 'booking_confirmation'
 end

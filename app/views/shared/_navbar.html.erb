@@ -1,23 +1,25 @@
 <nav class="navbar navbar-expand-sm navbar-lewagon sticky-top">
   <div class="container">
-    <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-center"> <!-- Modified line -->
       <%= link_to root_path, class: "navbar-brand" do %>
         <h1><span class="navbar-brand-text">RENTSTA</span></h1>
       <% end %>
-
-      <%= simple_form_for :search, url: listings_path, method: :get, html: { class: "search-form" } do |f| %>
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <%= f.input :query, label: false, input_html: { class: "form-control", placeholder: "Search Stadium" }, wrapper_html: { class: "search-form-control" } %>
+      <% unless current_page?(root_path) %>
+        <%= simple_form_for :search, url: listings_path, method: :get, html: { class: "search-form" } do |f| %>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <%= f.input :query, label: false, input_html: { class: "form-control", placeholder: "Search Stadium" }, wrapper_html: { class: "search-form-control-2" } %> <!-- Updated class name -->
+            </div>
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-white">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
           </div>
-          <div class="input-group-append">
-            <button type="submit" class="btn btn-white">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
+
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
