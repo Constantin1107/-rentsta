@@ -9,28 +9,24 @@
   </div>
 </div>
 
-<div class="bookings-container">
+<div class="container bookings-container">
   <div class="row">
     <% @bookings.each do |booking| %>
-      <div class="col-6">
-        <div class="card-category-booking">
-          <div class="card-booking card">
-            <% if booking.listing.photos.attached? %>
-              <%= link_to edit_booking_path(booking.id) do %>
-                <%= cl_image_tag booking.listing.photos.first.key, width: 300, height: 200, crop: :fill, class: "card-img-top-booking" %>
-              <% end %>
-            <% else %>
-              <span>No photo available</span>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card card-booking">
+          <% if booking.listing.photos.attached? %>
+            <%= link_to edit_booking_path(booking.id) do %>
+              <%= cl_image_tag booking.listing.photos.first.key, width: 300, height: 200, crop: :fill, class: "card-img-top-booking" %>
             <% end %>
-            <div class="card-body-booking">
-              <div class="card-booking-infos" style="text-decoration: none; color: black;">
-                <h2><%= booking.listing.name %></h2>
-                <p><%= booking.listing.address %></p>
-                <p><strong>User:</strong> <%= booking.user.email %></p>
-                <p><strong>Date:</strong> <%= booking.booking_date %></p>
-                <p><strong>Status:</strong> <%= booking.status %></p>
-                <%# <%= link_to 'Edit', edit_booking_path(booking.id), class: "btn button" %>
-              </div>
+          <% else %>
+            <span>No photo available</span>
+          <% end %>
+          <div class="card-body card-body-booking">
+            <div class="card-booking-infos" style="text-decoration: none; color: black;">
+              <h2><%= booking.listing.name %></h2>
+              <p><%= booking.listing.address %></p>
+              <p><strong>Date:</strong> <%= booking.booking_date %></p>
+              <p><strong>Status:</strong> <%= booking.status %></p>
             </div>
           </div>
         </div>
